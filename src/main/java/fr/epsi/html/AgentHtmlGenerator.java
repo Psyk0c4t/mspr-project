@@ -28,10 +28,15 @@ public class AgentHtmlGenerator {
             String[] datas = lines.toArray(new String[0]);      //initialisation du tableau
 
 
-            System.out.println("Fiche Agent");  //En-tête
-            System.out.println("<br/>Nom de l'agent : " + datas[0]  );   //nom agent
-            System.out.println("<br/>Prénom de l'agent: "+ datas[1]);   //prenom agent
+            System.out.println("<b>Fiche Agent</b>");  //En-tête
+            System.out.println("<br/>Nom de l'agent : " + datas[0]  );   //Nom agent
+            System.out.println("<br/>Prénom de l'agent: "+ datas[1]);   //Prenom agent
             System.out.println("<br/>Rôle de l'agent: "+ datas[2]);     //Role agent
+
+            System.out.println("<br/><b>Liste du matériel: </b>");  //Boucle pour lister materiel
+            for (int i =5; i < datas.length; i++) {
+                System.out.println("<br/>" + datas[i]);        //Liste materiel
+            }
 
 
 

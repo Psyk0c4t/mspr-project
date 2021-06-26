@@ -1,5 +1,6 @@
 package fr.epsi.html;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,6 +30,8 @@ public class AgentHtmlGenerator {
 
 
             System.out.println("<b>Fiche Agent</b>");  //En-tête
+           // String name = new File("C:/Users/thoma/Documents/Github/epsi-mspr-data/data/").getName();
+            System.out.println("<img src='/var/www/html/data/zthatcher.jpg'>");
             System.out.println("<br/>Nom de l'agent : " + datas[0]  );   //Nom agent
             System.out.println("<br/>Prénom de l'agent: "+ datas[1]);   //Prenom agent
             System.out.println("<br/>Rôle de l'agent: "+ datas[2]);     //Role agent
@@ -37,42 +40,6 @@ public class AgentHtmlGenerator {
             for (int i =5; i < datas.length; i++) {
                 System.out.println("<br/>" + datas[i]);        //Liste materiel
             }
-
-
-
-         /*   for (String line : lines) { //
-                // System.out.println(line);
-                System.out.println("<tr>");
-                String[] array  = line.split(",");
-                for (String a:array){
-                    System.out.println("<td>");
-                    System.out.println("Fiche Agent");  //En-tête
-                    System.out.println("");   //nom agent
-
-                    System.out.println("</td>");
-                }
-                for (String b:array){
-                    System.out.println("<td>");
-                    System.out.println("Nom de l'agent:"+b);   //prenom agent
-
-                    System.out.println("</td>");
-
-                    System.out.println("<a href='index.html'> </a>");
-                }
-                for (String c:array){
-                    System.out.println("<td>");
-                    System.out.println("Prénom de l'agent: "+c);   //Rôle
-
-                    System.out.println("</td>");
-                }
-                for (String d:array){
-                    System.out.println("<td>");
-                    System.out.println();   //Liste du materiel
-                    System.out.println("<a href='index.html'> </a>");   //Retour au menu
-                    System.out.println("</td>");
-                }
-                System.out.println("</tr>");
-            }*/
             System.out.println("</body></html>");
         }catch (IOException e){
             e.printStackTrace();
